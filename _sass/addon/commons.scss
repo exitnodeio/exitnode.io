@@ -176,6 +176,8 @@ footer {
   font-size: 0.8rem;
   background-color: var(--main-bg);
 
+  @extend %text-color;
+
   div.d-flex {
     height: $footer-height;
     line-height: 1.2rem;
@@ -185,7 +187,7 @@ footer {
   }
 
   a {
-    @extend %text-color;
+    @extend %text-highlight;
 
     &:hover {
       @extend %link-hover;
@@ -243,7 +245,6 @@ i {
   .post-tag {
     line-height: 1.05rem;
     font-size: 0.85rem;
-    border: 1px solid var(--btn-border-color);
     border-radius: 0.8rem;
     padding: 0.3rem 0.5rem;
     margin: 0 0.35rem 0.5rem 0;
@@ -494,9 +495,10 @@ i {
   display: inline-block;
   min-width: 2rem;
   text-align: center;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--btn-border-color);
   padding: 0 0.4rem;
-  color: inherit;
+  color: var(--text-muted-color);
   line-height: 1.3rem;
 
   &:not(:last-child) {
@@ -719,16 +721,8 @@ $btn-mb: 0.5rem;
     width: 7rem;
     height: 7rem;
     overflow: hidden;
-    box-shadow: var(--avatar-border-color) 0 0 0 2px;
-    transform: translateZ(0); /* fixed the zoom in Safari */
-
-    img {
-      transition: transform 0.5s;
-
-      &:hover {
-        transform: scale(1.2);
-      }
-    }
+    -webkit-filter: drop-shadow(0px 0px 20px #000);
+    filter: drop-shadow(0px 0px 20px #000);
   }
 
   .profile-wrapper {
@@ -745,19 +739,20 @@ $btn-mb: 0.5rem;
     font-size: 1.75rem;
     line-height: 1.2;
     letter-spacing: 0.25px;
-    color: rgba(134, 133, 133, 0.99);
     margin-top: 1.25rem;
     margin-bottom: 0.5rem;
 
     a {
       @extend %clickable-transition;
       @extend %sidebar-link-hover;
+
+      color: var(--site-title-color);
     }
   }
 
   .site-subtitle {
     font-size: 95%;
-    color: var(--sidebar-muted-color);
+    color: var(--site-subtitle-color);
     margin-top: 0.25rem;
     word-spacing: 1px;
     -webkit-user-select: none;
@@ -915,7 +910,7 @@ $btn-mb: 0.5rem;
 
   #breadcrumb {
     font-size: 1rem;
-    color: gray;
+    color: var(--text-muted-color);
     padding-left: 0.5rem;
 
     a:hover {
@@ -1102,7 +1097,6 @@ $btn-mb: 0.5rem;
 /* --- main wrapper --- */
 
 #main-wrapper {
-  background-color: var(--main-bg);
   position: relative;
   min-height: calc(100vh - $footer-height-mobile);
 
