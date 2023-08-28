@@ -1,7 +1,7 @@
 # The Site Configuration
 
 # Import the theme
-remote_theme: exitnodeio/exitnode.io 
+#remote_theme: exitnodeio/exitnode.io 
 
 # Change the following value to '/PROJECT_NAME' ONLY IF your site type is GitHub Pages Project sites
 # and doesn't have a custom domain.
@@ -182,14 +182,6 @@ exclude:
   - rollup.config.js
   - node_modules
   - package*.json
-
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
 
 jekyll-archives:
   enabled: [categories, tags]
