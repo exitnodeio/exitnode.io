@@ -183,6 +183,14 @@ exclude:
   - node_modules
   - package*.json
 
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
 jekyll-archives:
   enabled: [categories, tags]
   layouts:
