@@ -173,6 +173,7 @@ compress_html:
 
 plugins:
   - jekyll-include-cache
+  - jekyll-paginate
 
 exclude:
   - "*.gem"
