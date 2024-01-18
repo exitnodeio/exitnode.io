@@ -19,6 +19,6 @@ package-lock.json
 .vscode
 
 # Ruby
-.ruby
+.ruby-version
 
 # Misc
