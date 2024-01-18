@@ -2,6 +2,7 @@
 # the default layout is 'page'
 icon: fa fa-thumbs-up
 order: 3
+description: Awesome things and awesome people :)
 ---
 
 ## Technical References
